@@ -107,20 +107,20 @@ function Preview() {
                   See Description
                 </Button>
               )}
+              <div>
+                <h1>Available Seasons</h1>
+
+                <div key={podcast.id}>
+                  <Link to={`/season/${podcast.id}`}>View Season</Link>
+                </div>
+              </div>
+              
             </div>
-            
+
             <div>
               <p>Seasons: {podcast.seasons}</p>
               <p>Last Updated: {getFullYearAndDate(podcast.updated)}</p>
               <p>Genres: {podcast.genres.join(", ")}</p>
-            </div>
-            <div>
-              <h1>Available Seasons</h1>
-              {podcasts.map((podcast) => (
-                <div key={podcast.id}>
-                  <Link to={`/season/${podcast.id}`}>View Season</Link>
-                </div>
-              ))}
             </div>
           </div>
         ))}
