@@ -1,6 +1,7 @@
 // NavigationBar.tsx
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { Input } from '@mui/material';
 
 interface NavigationBarProps {
   onSearch: (query: string) => void;
@@ -33,8 +34,14 @@ function NavBar({ onSearch, onSort, onThemeChange }: NavigationBarProps) {
       <Link to="/">
         <button>Back</button>
       </Link>
+      <div className="sort-option">
+        <label>
+          A-Z
+          <input type="radio" name="sort-option" onChange={handleSortOptionChange} />
+        </label>
+      </div>
       <form onSubmit={handleSearchSubmit} className="search-bar">
-        <input
+        <Input
           type="text"
           value={searchQuery}
           onChange={handleSearchInputChange}
@@ -42,12 +49,7 @@ function NavBar({ onSearch, onSort, onThemeChange }: NavigationBarProps) {
         />
         <button type="submit">Search</button>
       </form>
-      <div className="sort-option">
-        <label>
-          A-Z
-          <input type="radio" name="sort-option" onChange={handleSortOptionChange} />
-        </label>
-      </div>
+      
       <div className="theme-toggle">
         <button onClick={handleThemeChange}>Toggle Theme</button>
       </div>
