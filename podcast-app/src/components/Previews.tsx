@@ -1,17 +1,49 @@
 // Preview.tsx
 import { useState, useEffect } from "react";
-import NavBar from './NavBar'
+import NavBar from "./NavBar";
+import { Button } from "@mui/material";
+import { Link } from "react-router-dom";
+
 const API_URL = "https://podcast-api.netlify.app/shows";
 
 interface Podcast {
+  id: any;
   image: string;
   title: string;
   description: string;
   seasons: number;
+  updated: string;
+  genres: number[];
+  episodes: Episode[];
 }
+interface Episode {
+  title: string;
+  description: string;
+  episodeNumber: number;
+  audioFile: string;
+}
+
 function Preview() {
   const [podcasts, setPodcasts] = useState<Podcast[]>([]);
   const [selectedPodcast, setSelectedPodcast] = useState<Podcast | null>(null);
+
+  const getFullYearAndDate = (dateString: string) => {
+    const dateObj = new Date(dateString);
+
+    // Check if the dateObj is valid
+    if (isNaN(dateObj.getTime())) {
+      // If the dateObj is not valid, return default values or handle the error as needed
+      return "N/A";
+    }
+
+    const fullYear = dateObj.getFullYear();
+    const dayOfMonth = dateObj.getDate();
+
+    // Add leading zeros to the day if needed
+    const formattedDay = dayOfMonth.toString().padStart(2, "0");
+
+    return `${fullYear}/${formattedDay}`;
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -60,7 +92,7 @@ function Preview() {
                 <div className="description-modal">
                   <div className="description-modal-content">
                     <p>{podcast.description}</p>
-                    <button onClick={handleCloseModal}>Close</button>
+                    <Button onClick={handleCloseModal}>Close</Button>
                   </div>
                   <div
                     className="description-modal-overlay"
@@ -68,10 +100,27 @@ function Preview() {
                   />
                 </div>
               ) : (
-                <button onClick={() => handleSeeDescriptionClick(podcast)}>
+                <Button
+                  variant="contained"
+                  onClick={() => handleSeeDescriptionClick(podcast)}
+                >
                   See Description
-                </button>
+                </Button>
               )}
+            </div>
+            
+            <div>
+              <p>Seasons: {podcast.seasons}</p>
+              <p>Last Updated: {getFullYearAndDate(podcast.updated)}</p>
+              <p>Genres: {podcast.genres.join(", ")}</p>
+            </div>
+            <div>
+              <h1>Available Seasons</h1>
+              {podcasts.map((podcast) => (
+                <div key={podcast.id}>
+                  <Link to={`/season/${podcast.id}`}>View Season</Link>
+                </div>
+              ))}
             </div>
           </div>
         ))}
