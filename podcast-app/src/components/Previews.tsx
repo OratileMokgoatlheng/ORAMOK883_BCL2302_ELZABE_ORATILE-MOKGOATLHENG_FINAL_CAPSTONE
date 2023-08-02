@@ -4,10 +4,11 @@ import NavBar from "./NavBar";
 import { Button } from "@mui/material";
 import { Link } from "react-router-dom";
 
+
 const API_URL = "https://podcast-api.netlify.app/shows";
 
 interface Podcast {
-  id: any;
+  id: string;
   image: string;
   title: string;
   description: string;

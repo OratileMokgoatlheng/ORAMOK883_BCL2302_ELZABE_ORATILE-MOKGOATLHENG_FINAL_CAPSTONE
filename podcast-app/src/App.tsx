@@ -3,8 +3,8 @@ import "./App.css";
 import LogIn from "./components/LogIn";
 import Preview from "./components/Previews";
 import Seasons from "./components/Seasons";
-
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+
 function App() {
   //const [count, setCount] = useState(0)
 
@@ -14,7 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<LogIn />} />
           <Route path="/preview" element={<Preview />} />
-          <Route path="/seasons/:seasonId" element={<Seasons />} />
+          <Route path="/season/:podcastId" element={<Seasons />} />
         </Routes>
       </Router>
     </>
