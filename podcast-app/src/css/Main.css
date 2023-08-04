@@ -12,3 +12,20 @@ body{
     margin: 0;
     padding: 0;
 }
+
+.submit--button--login{
+    text-align: center;
+    align-items: center;
+    background-color: rgb(54, 215, 145);
+    border-radius: 5px;
+    width: 100%;
+    height: 45px;
+    color: aliceblue;
+    text-indent: 10px;
+}
+
+.submit--button--login:hover{
+    
+}
+
+

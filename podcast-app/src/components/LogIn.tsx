@@ -142,7 +142,7 @@ const Login = ({ onLogin, setShowAuth }) => {
           providers={["google", "GitHub"]}
           handleSession={handleSession} // Call handleLogin when the session is available
         />
-        <Button className="submit--button--login" variant="contained" onClick={handleSubmit} >You may now go to the podcast</Button>
+        <button className="submit--button--login" variant="contained" onClick={handleSubmit} >You may now go to the podcast</button>
       </header>
       
     </div>

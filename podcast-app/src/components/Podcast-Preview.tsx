@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useCallback} from 'react';
 import { FilterBar } from './Filter-bar';
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import  {CircularProgress, Button } from '@mui/material';
@@ -224,10 +224,15 @@ const handleAddToFavorites = () => {
 };
 
 
+const navigate = useNavigate()
 
+  const handleBackButton = () => {
+    navigate('/');
+  };
+  
   return (
     <div>
-      <button>back</button>
+      <button className='back--preview--button' onClick={handleBackButton}>🔙</button>
       <FilterBar
        onSearch={handleSearch}
        filteredShows={filteredShows}
