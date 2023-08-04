@@ -223,13 +223,7 @@ const handleAddToFavorites = () => {
   }
 };
 
-const handleSeeDescriptionClick = (show: ShowPreview) => {
-  setSelectedShow(show);
-};
 
-const handleCloseModal = () => {
-  setSelectedShow(null);
-};
 
   return (
     <div>
@@ -269,27 +263,7 @@ const handleCloseModal = () => {
            
          </button>
          
-         {/* <div>
-         {selectedShow === show ? (
-                <div className="description-modal">
-                  <div className="description-modal-content">
-                    <p>{show.description}</p>
-                    <Button onClick={handleCloseModal}>Close</Button>
-                  </div>
-                  <div
-                    className="description-modal-overlay"
-                    onClick={handleCloseModal}
-                  />
-                </div>
-              ) : (
-                <Button
-                  variant="contained"
-                  onClick={() => handleSeeDescriptionClick(show)}
-                >
-                  See Description
-                </Button>
-              )}
-        </div> */}
+         
         </div>
         
       ))}

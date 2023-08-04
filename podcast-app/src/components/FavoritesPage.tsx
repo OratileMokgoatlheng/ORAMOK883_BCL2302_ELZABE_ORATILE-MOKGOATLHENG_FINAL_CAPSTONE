@@ -36,8 +36,11 @@ export const FavoritesPage: React.FC = () => {
   const navigate = useNavigate();
 
   const backToHome = () => {
-    navigate('/');
+    navigate('/App');
   };
+
+
+ 
   
   const handleSearch = (query: string) => {
     const filteredShows = favorites.filter((show: any) =>

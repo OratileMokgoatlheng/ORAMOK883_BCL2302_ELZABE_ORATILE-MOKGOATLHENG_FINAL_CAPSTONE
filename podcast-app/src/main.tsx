@@ -32,14 +32,13 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   <Provider store={store}>
     <BrowserRouter>
       <Routes>
-        
-        {/* <Route path="/App" element={<App />} /> */}
+        <Route path='/' element={<LogIn />} /> 
+        <Route path="/App" element={<App />} />
         {/* <Route path="/./components/SignUp.tsx" element={<SignUp />} /> */}
         {/* Other existing routes */}
         <Route path="/components/FavoritesPage" element={<FavoritesPage />} />
       </Routes>
     </BrowserRouter>
   </Provider>
-  <LogIn/>
 </React.StrictMode>,
 )

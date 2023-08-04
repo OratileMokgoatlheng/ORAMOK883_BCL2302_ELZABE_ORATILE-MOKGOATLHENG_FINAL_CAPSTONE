@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Input, Button } from "@mui/material";
 import { supabase } from "../store/client";
+import { useNavigate } from "react-router-dom";
 
 interface LogginIn {
   username: string;
@@ -14,6 +15,11 @@ export default function LogIn() {
     email: "",
     password: "",
   });
+
+  const navigate = useNavigate()
+  function handleSubmit(){
+    navigate('/App')
+  }
 
   function handleInputChange(e: React.ChangeEvent<HTMLInputElement>) {
     setFormData({
@@ -94,7 +100,7 @@ export default function LogIn() {
               value={formData.password}
               onChange={handleInputChange}
             />
-            <Button variant="outlined" className="btn" type="submit">
+            <Button onClick={handleSubmit} variant="outlined" className="btn" type="submit">
               Log In
             </Button>
           </form>
