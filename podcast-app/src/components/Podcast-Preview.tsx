@@ -227,6 +227,7 @@ const handleAddToFavorites = () => {
 
   return (
     <div>
+      <button>back</button>
       <FilterBar
        onSearch={handleSearch}
        filteredShows={filteredShows}
