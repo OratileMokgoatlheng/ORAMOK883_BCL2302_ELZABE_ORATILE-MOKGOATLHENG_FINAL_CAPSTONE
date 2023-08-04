@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Comic+Sans+MS&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Comic+Sans+MS&display=swap");
 
-@media ( min-width: 300px) {
-  .carousel--container{
+@media (min-width: 300px) {
+  .carousel--container {
     margin-top: 70px;
     justify-content: center;
     border-width: 1px;
@@ -9,10 +9,308 @@
     margin-right: 0;
     margin-left: 25px;
     padding-top: 10px;
-    border-color: rgb(255, 255, 255)
+    border-color: rgb(255, 255, 255);
   }
 
-/* CSS animation for the box shadow color */
+  /* CSS animation for the box shadow color */
+  @keyframes slideBoxShadowColor {
+    0% {
+      box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.76);
+    }
+    50% {
+      box-shadow: 1px 1px 10px rgba(78, 78, 78, 0.76); /* Change to the desired color */
+    }
+    100% {
+      box-shadow: 1px 1px 10px rgba(150, 150, 150, 0.76);
+    }
+  }
+
+  /* Applying the animation to carousel container */
+  .slick-slider {
+    animation: slideBoxShadowColor 2s infinite; /* Adjust animation duration as needed */
+  }
+
+  .slick-next {
+    position: absolute;
+    top: 42%;
+    left: 100%;
+    margin-left: 1px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: white;
+    font-size: 0px;
+    padding: 2px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .slick-prev {
+    position: absolute;
+    top: 42%;
+    transform: translateY(-50%);
+    background-color: none;
+    color: white;
+    font-size: 0px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .carousel--img {
+    width: 100px;
+    height: 80px;
+    object-fit: fill;
+    z-index: 0;
+    margin-left: 15px;
+    border-radius: 5px;
+  }
+  .carousel--title {
+    font-size: 15px;
+    padding-left: 7px;
+    padding-right: 7px;
+    color: rgb(255, 255, 255);
+  }
+
+  .carousel--seasons {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  /* Customize slide appearance */
+  .slick-slide {
+    padding: 10px;
+    text-align: center;
+  }
+
+  /* Customize arrow buttons */
+  .slick-prev:before,
+  .slick-next:before {
+    color: #000; /* Change arrow color */
+  }
+
+  /* Customize dots (pagination) */
+  .slick-dots li button:before {
+    color: #000; /* Change dot color */
+  }
+  .carousel--slide {
+    text-align: center;
+    width: 20%;
+    justify-content: space-between;
+    display: flex;
+    position: relative;
+  }
+
+  .carousel--heading {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 22px;
+    font-style: oblique;
+    font-weight: bold;
+    color: whitesmoke;
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+}
+
+@media (min-width: 650px) {
+  .carousel--container {
+    margin-top: 70px;
+    justify-content: center;
+    border-width: 1px;
+    width: 85%;
+    margin-right: 0;
+    margin-left: 25px;
+    padding-top: 10px;
+    border-color: rgb(255, 255, 255);
+  }
+
+  .slick-next {
+    position: absolute;
+    top: 42%;
+    left: 100%;
+    margin-left: 1px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: white;
+    font-size: 0px;
+    padding: 2px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .slick-prev {
+    position: absolute;
+    top: 42%;
+    transform: translateY(-50%);
+    background-color: none;
+    color: white;
+    font-size: 0px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .carousel--img {
+    width: 150px;
+    height: 150px;
+    object-fit: fill;
+    z-index: 0;
+    margin-left: 15px;
+    border-radius: 5px;
+  }
+  .carousel--title {
+    font-size: 15px;
+    padding-left: 7px;
+    padding-right: 7px;
+    color: rgb(255, 255, 255);
+  }
+
+  .carousel--seasons {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  /* CSS animation for the box shadow color */
+  @keyframes slideBoxShadowColor {
+    0% {
+      box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.76);
+    }
+    50% {
+      box-shadow: 1px 1px 10px rgba(78, 78, 78, 0.76); /* Change to the desired color */
+    }
+    100% {
+      box-shadow: 1px 1px 10px rgba(150, 150, 150, 0.76);
+    }
+  }
+
+  /* Applying the animation to carousel container */
+  .slick-slider {
+    animation: slideBoxShadowColor 2s infinite; /* Adjust animation duration as needed */
+  }
+  /* Customize slide appearance */
+  .slick-slide {
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Customize arrow buttons */
+  .slick-prev:before,
+  .slick-next:before {
+    color: #000; /* Change arrow color */
+  }
+
+  /* Customize dots (pagination) */
+  .slick-dots li button:before {
+    color: #000; /* Change dot color */
+  }
+  .carousel--slide {
+    text-align: center;
+    width: 20%;
+    justify-content: space-between;
+    display: flex;
+    position: relative;
+  }
+
+  .carousel--heading {
+    margin-top: 40px;
+    text-align: center;
+    margin-right: 95px;
+    font-size: 22px;
+    font-style: oblique;
+    font-weight: lighter;
+    color: whitesmoke;
+  }
+}
+
+@media (min-width: 1000px) {
+  .carousel--container {
+    margin-top: 30px;
+    justify-content: center;
+    border-width: 2px;
+    width: 85%;
+    margin-left: 95px;
+    padding-top: 30px;
+    padding-left: 0;
+    padding-right: 0;
+    border-radius: 15px;
+    border-color: grey;
+  }
+  .carousel--slide {
+    text-align: center;
+    width: 40%;
+    margin-right: 45px;
+    justify-content: space-between;
+    display: flex;
+    position: relative;
+  }
+
+  .slick-next {
+    position: absolute;
+    top: 42%;
+    left: 100%;
+    margin-left: 19px;
+    transform: translateY(-50%);
+    background-color: transparent;
+    color: white;
+    font-size: 0px;
+    padding: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 1;
+  }
+
+  .slick-prev {
+    position: absolute;
+    top: 42%;
+    left: -5%;
+    transform: translateY(-50%);
+    background-color: none;
+    color: white;
+    font-size: 0px;
+    padding: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .carousel--img {
+    width: 350px;
+    height: 350px;
+    object-fit: fill;
+    z-index: 0;
+    margin-left: 15px;
+    border-radius: 5px;
+  }
+  .carousel--title {
+    font-size: 15px;
+    padding-left: 7px;
+    padding-right: 7px;
+    color: rgb(255, 255, 255);
+  }
+
+  .carousel--seasons {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  /* Customize slide appearance */
+  .slick-slide {
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Customize arrow buttons */
+  .slick-prev:before,
+  .slick-next:before {
+    color: #000; /* Change arrow color */
+  }
+
+  /* Customize dots (pagination) */
+  .slick-dots li button:before {
+    color: #000; /* Change dot color */
+  }
+
+  /* CSS animation for the box shadow color */
 @keyframes slideBoxShadowColor {
   0% {
     box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.76);
@@ -30,321 +328,21 @@
   animation: slideBoxShadowColor 2s infinite; /* Adjust animation duration as needed */
 }
 
-  .slick-next {
-    position: absolute;
-    top: 42%;
-    left: 100%;
-    margin-left: 1px;
-    transform: translateY(-50%);
-    background-color: transparent;
-    color: white;
-    font-size: 0px;
-    padding: 2px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    z-index: 1;
-  }
-
-  .slick-prev{
-    position: absolute;
-    top: 42%;
-    transform: translateY(-50%);
-    background-color: none;
-    color: white;
-    font-size: 0px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    z-index: 1;
-  }
-  .carousel--img {
-    width: 100px;
-    height: 80px;
-    object-fit:fill;
-    z-index: 0;
-    margin-left: 15px;
-    border-radius: 5px;
-  }
-  .carousel--title{
-    font-size: 15px;
-    padding-left:7px;
-    padding-right: 7px;
-    color: rgb(255, 255, 255);
-    
-  }
-
-  .carousel--seasons{
-    color: rgba(255, 255, 255, 0.8);
-  }
-
-/* Customize slide appearance */
-.slick-slide {
-  padding: 20px;
-  text-align: center;
-}
-
-/* Customize arrow buttons */
-.slick-prev:before,
-.slick-next:before {
-  color: #000; /* Change arrow color */
-}
-
-/* Customize dots (pagination) */
-.slick-dots li button:before {
-  color: #000; /* Change dot color */
-}  
-  .carousel--slide {
-    text-align: center;
-    width: 20%;
-    justify-content: space-between;
-    display: flex;
-    position: relative;
-  
-  }
-  
-  .carousel--heading{
+  .carousel--heading {
     margin-top: 40px;
     text-align: center;
     font-size: 22px;
-    font-style: oblique;
-    font-weight: bold;
-    color: whitesmoke;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  }
-}
-
-@media ( min-width: 650px) {
-  .carousel--container{
-    margin-top: 30px;
-    justify-content: center;
-    border-style:dotted;
-    border-width: 2px;
-    width: 55%;
-    margin-left: 185px;
-    margin-right: 130px;
-    padding-top: 30px;
-    padding-left: 0;
-    padding-right: 0;
-    border-radius: 15px;
-    border-color: grey;
-    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.76);
-  }
-
-  .slick-next {
-    position: absolute;
-    top: 42%;
-    left: 100%;
-    margin-left: 1px;
-    transform: translateY(-50%);
-    background-color: transparent;
-    color: white;
-    font-size: 0px;
-    padding: 2px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    z-index: 1;
-  }
-
-  .slick-prev{
-    position: absolute;
-    top: 42%;
-    transform: translateY(-50%);
-    background-color: none;
-    color: white;
-    font-size: 0px;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    z-index: 1;
-  }
-  .carousel--img {
-    width: 75%;
-    height: 120px;
-    object-fit:fill;
-    z-index: 0;
-    margin-left: 15px;
-   
-  }
-  .carousel--title{
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    font-size: 10px;
-    padding-left:7px;
-    padding-right: 7px;
-    color: whitesmoke;
-    line-height: 1em;
-    font-weight: lighter;
-  }
-
-  .carousel--seasons{
-    color: rgb(0, 0, 0);
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-color: rgb(255, 248, 248);
-    width: 40%;
-    border-radius: 5px ;
-    font-size: 7px;
-    opacity: 0.6;
-    margin-left: 38px;
-  }
-
-  /* Customize slide appearance */
-.slick-slide {
-  padding: 20px;
-  text-align: center;
-}
-
-/* Customize arrow buttons */
-.slick-prev:before,
-.slick-next:before {
-  color: #000; /* Change arrow color */
-}
-
-/* Customize dots (pagination) */
-.slick-dots li button:before {
-  color: #000; /* Change dot color */
-} 
-  .carousel--slide {
-    text-align: center;
-    width: 20%;
-    justify-content: space-between;
-    display: flex;
-    position: relative;
-  
-  }
-  
-  .carousel--heading{
-    margin-top: 40px;
-    text-align: center;
-    margin-right: 95px;
-    font-size: 22px;
+    margin-right: 5px;
     font-style: oblique;
     font-weight: lighter;
     color: whitesmoke;
   }
 }
-
-
-@media(min-width: 1000px) {
-  .carousel--container{
-  margin-top: 30px;
-  justify-content: center;
-  border-style: outset;
-  border-width: 2px;
-  width: 85%;
-  margin-left: 95px;
-  padding-top: 30px;
-  padding-left: 0;
-  padding-right: 0;
-  border-radius: 15px;
-  border-color: grey;
-  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.76);
-}
-.carousel--slide {
-  text-align: center;
-  width: 40%;
-  margin-right: 45px;
-  justify-content: space-between;
-  display: flex;
-  position: relative;
-
+.slick-prev::marker {
+  font-size: 55px;
 }
 
-.slick-next {
-  position: absolute;
-  top: 42%;
-  left: 100%;
-  margin-left: 19px;
-  transform: translateY(-50%);
-  background-color: transparent;
-  color: white;
-  font-size: 0px;
-  padding: 8px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  z-index: 1;
-}
-
-.slick-prev{
-  position: absolute;
-  top: 42%;
-  left: -5%;
-  transform: translateY(-50%);
-  background-color: none;
-  color: white;
-  font-size: 0px;
-  padding: 8px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  z-index: 1;
-}
-.carousel--img {
-  width: 75%;
-  height: 320px;
-  object-fit:fill;
-  z-index: 0;
-  margin-left: 50px;
- 
-}
-
-.carousel--title{
-  font-family: 'Comic Sans MS', cursive, sans-serif;
-  font-size: 19px;
-  padding-left:7px;
-  padding-right: 7px;
-  color: whitesmoke;
-  line-height: 1em;
-  font-weight: lighter;
-}
-
-/* Customize slide appearance */
-.slick-slide {
-  padding: 20px;
-  text-align: center;
-}
-
-/* Customize arrow buttons */
-.slick-prev:before,
-.slick-next:before {
-  color: #000; /* Change arrow color */
-}
-
-/* Customize dots (pagination) */
-.slick-dots li button:before {
-  color: #000; /* Change dot color */
-} 
-
-.carousel--seasons{
-  color: rgb(0, 0, 0);
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  background-color: rgb(255, 248, 248);
-  width: 50%;
-  margin-left: 88px;
-  border-radius: 15px ;
-  font-size: 15px;
-  opacity: 0.6;
-}
-
-.carousel--heading{
-  margin-top: 40px;
-  text-align: center;
-  font-size: 22px;
-  margin-right: 5px;
-  font-style: oblique;
-  font-weight: lighter;
-  color: whitesmoke;
-}
-}
-  .slick-prev::marker{
-    font-size: 55px;
-  }
-
-  
-
-
- /*.carousal__description{
+/*.carousal__description{
    overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -366,5 +364,3 @@
     height: 100%;
     background-color: rgba(27, 27, 27, 0.5); 
   }*/
-  
-  

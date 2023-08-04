@@ -1,9 +1,10 @@
 
 import React, { useState, useEffect, useCallback} from 'react';
 import { FilterBar } from './Filter-bar';
+import { Link } from "react-router-dom";
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
-import  {CircularProgress } from '@mui/material';
+import  {CircularProgress, Button } from '@mui/material';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import { useSelector, useDispatch } from 'react-redux';
@@ -222,6 +223,14 @@ const handleAddToFavorites = () => {
   }
 };
 
+const handleSeeDescriptionClick = (show: ShowPreview) => {
+  setSelectedShow(show);
+};
+
+const handleCloseModal = () => {
+  setSelectedShow(null);
+};
+
   return (
     <div>
       <FilterBar
@@ -254,13 +263,37 @@ const handleAddToFavorites = () => {
                  {show.genres && show.genres.length > 0 ? show.genres.join(', ') : 'Not applicable'}
                </p>
              </div>
+             
              <p>Updated:  {new Date(show.updated).toLocaleDateString('en-US', { dateStyle: 'long' })}</p>
            </div>
-          
+           
          </button>
-        
+         
+         {/* <div>
+         {selectedShow === show ? (
+                <div className="description-modal">
+                  <div className="description-modal-content">
+                    <p>{show.description}</p>
+                    <Button onClick={handleCloseModal}>Close</Button>
+                  </div>
+                  <div
+                    className="description-modal-overlay"
+                    onClick={handleCloseModal}
+                  />
+                </div>
+              ) : (
+                <Button
+                  variant="contained"
+                  onClick={() => handleSeeDescriptionClick(show)}
+                >
+                  See Description
+                </Button>
+              )}
+        </div> */}
         </div>
+        
       ))}
+      
      
        
        {dialogOpen && selectedShow && selectedSeasons && (

@@ -24,6 +24,7 @@
 // export default App;
 
 import React, { useState, useEffect } from 'react';
+
 import { Header } from './components/Header'
 import { Carousal } from './components/Carousal'
 import { PodcastPreview } from './components/Podcast-Preview'
@@ -102,8 +103,6 @@ export const App: React.FC = () => {
     };
     
     void fetchData();
-
-    // I did not include a clean up function because this data will be used through out my app.
   }, []);
 
     const showId = podcastData.flatMap((show) =>{

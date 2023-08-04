@@ -1,4 +1,6 @@
 import React, { useState} from "react";
+import SearchIcon from '@mui/icons-material/Search';
+import { Input } from "@mui/material";
 
 type AllShowData = Array<ShowPreview>;
 
@@ -60,25 +62,25 @@ export const FilterBar: React.FC<FilterBarProps> = ({ onSearch, filteredShows, o
 
   return (
     <div>
-      <h3 className="heading__check">Check out our available shows!</h3>
-      <div className="filter__bar">
+      <div className="filter--bar">
+      
         <form className="search__container" onSubmit={handleSubmit}>
           <label htmlFor="search" className="search__label">
-            Search
+          <SearchIcon />
           </label>
-          <input
+          <Input
             type="search"
             id="search"
             name="search"
             value={searchQuery}
             onChange={handleSearch}
             required
-            className="search__input"
+            className="search--input"
           />
         </form>
-
-        <div className="sort__container">
-          <div className="filter__heading">
+        <h3 className="heading--title">Podcast Preview ⤵️</h3>
+        <div className="sort--container">
+          <div className="filter--heading">
             <p>Sort By:</p>
           </div>
           <select 
@@ -93,7 +95,10 @@ export const FilterBar: React.FC<FilterBarProps> = ({ onSearch, filteredShows, o
             <option value="least recent">LEAST RECENT</option>
           </select>
         </div>
+        
+        
       </div>
+      
     </div>
   );
 };

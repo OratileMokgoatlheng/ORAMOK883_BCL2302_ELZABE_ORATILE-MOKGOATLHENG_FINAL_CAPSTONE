@@ -1,20 +1,16 @@
 
 @media (min-width: 300px) {
-    .filter__bar {
-      display: flex;
-      width: 80%;
-      align-items: center;
-      height: fit-content;
-      margin-top: 30px;
-      margin-right: 0;
-    }
+  .filter--bar {
+    display: flex;
+    animation: slideBoxShadowColor 2s infinite
+  }
     
-    .filter__heading {
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      color: white;
-      font-size: 13px;
-      padding-right: 5px;
-    }
+  .filter--heading {
+    font-family:serif;
+    font-size: 15px;
+    color: white;
+    
+  }
     
     .filter__select {
       width: 49%;
@@ -53,20 +49,19 @@
       color: white;
     }
     
-    .search__input{
-      width: 60%;
-      background-color: rgba(255, 248, 248, 0.767);
-      border-style: solid;
+    .search--input{
+      width: 65%;
+      background-color: white;
       border-width: 2px;
-      border-radius: 8px;
+      border-radius: 5px;
       border-color: rgba(255, 255, 255);
-      height: 20px;
+      height: 26px;
     }
     
-    .sort__container {
+    .sort--container {
       display: flex;
       align-items: center;
-     margin-left: 30px;
+      font-size: larger;
     }
     
     .search__button{
@@ -75,18 +70,16 @@
   }
   
   @media (min-width: 700px) {
-    .filter__bar {
+    .filter--bar {
       display: flex;
-      width: 80%;
-      align-items: center;
-      height: fit-content;
-      margin-top: 30px;
-      margin-right: 0;
+      animation: slideBoxShadowColor 2s infinite
     }
     
-    .filter__heading {
-      font-family: 'Comic Sans MS', cursive, sans-serif;
+    .filter--heading {
+      font-family:serif;
+      font-size: 15px;
       color: white;
+      
     }
     
     .filter__select {
@@ -102,22 +95,34 @@
       margin-left: 5px;
     }
     
-    .heading__check {
+    .heading--title {
+      height: 50px;
       font-size: 25px;
-      padding-left: 23px;
-      margin-top: 75px;
+      padding-top: 10px;
+      margin-right: auto;
+      margin-left: auto;
       text-align: center;
       font-size: 22px;
-      font-family: 'Times New Roman', Times, serif;
-      font-style: oblique;
-      font-weight: lighter;
+      font-family:serif;
+      font-weight: bold;
       color: whitesmoke;
+      
+    }
+    @keyframes slideBoxShadowColor {
+      0% {
+        box-shadow: 1px 1px 10px rgba(122, 122, 122, 0.76);
+      }
+      50% {
+        box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.76); /* Change to the desired color */
+      }
+      100% {
+        box-shadow: 1px 1px 10px rgba(150, 150, 150, 0.76);
+      }
     }
     
     .search__container {
       display: flex;
       align-items: center;
-      margin-left: 250px;
     }
     
     .search__label{
@@ -126,20 +131,20 @@
       color: white;
     }
     
-    .search__input{
+    .search--input{
       width: 65%;
-      background-color: rgba(255, 248, 248, 0.767);
-      border-style: solid;
+      background-color: white;
       border-width: 2px;
-      border-radius: 8px;
+      border-radius: 5px;
       border-color: rgba(255, 255, 255);
       height: 26px;
+      margin-right: 12px;
     }
     
-    .sort__container {
+    .sort--container {
       display: flex;
       align-items: center;
-     margin-left: 20px;
+      font-size: larger;
     }
     
     .search__button{
@@ -149,18 +154,16 @@
   }
   
   @media (min-width: 1000px) {
-    .filter__bar {
+    .filter--bar {
       display: flex;
-      width: 80%;
-      align-items: center;
-      height: fit-content;
-      margin-top: 30px;
-      margin-right: 0;
+      animation: slideBoxShadowColor 2s infinite
     }
     
-    .filter__heading {
-      font-family: 'Comic Sans MS', cursive, sans-serif;
+    .filter--heading {
+      font-family:serif;
+      font-size: 15px;
       color: white;
+      
     }
     
     .filter__select {
@@ -191,7 +194,6 @@
     .search__container {
       display: flex;
       align-items: center;
-      margin-left: 480px;
     }
     
     .search__label{
@@ -200,20 +202,19 @@
       color: white;
     }
     
-    .search__input{
+    .search--input{
       width: 65%;
-      background-color: rgba(255, 248, 248, 0.767);
-      border-style: solid;
+      background-color: white;
       border-width: 2px;
-      border-radius: 8px;
+      border-radius: 5px;
       border-color: rgba(255, 255, 255);
       height: 26px;
     }
     
-    .sort__container {
+    .sort--container {
       display: flex;
       align-items: center;
-     margin-left: 20px;
+      font-size: larger;
     }
     
     .search__button{

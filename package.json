@@ -4,6 +4,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.14.1",
     "@mui/material": "^5.14.2",
+    "@supabase/supabase-js": "^2.31.0",
     "@types/history": "^5.0.0",
     "@types/react-router-dom": "^5.3.3",
     "fuse.js": "^6.6.2",
