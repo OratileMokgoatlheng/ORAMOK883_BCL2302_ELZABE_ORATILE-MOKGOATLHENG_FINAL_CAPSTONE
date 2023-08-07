@@ -15,13 +15,13 @@
   /* CSS animation for the box shadow color */
   @keyframes slideBoxShadowColor {
     0% {
-      box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.76);
+      box-shadow: 1px 1px 10px rgba(168, 25, 184, 0.76);
     }
     50% {
-      box-shadow: 1px 1px 10px rgba(78, 78, 78, 0.76); /* Change to the desired color */
+      box-shadow: 1px 1px 10px rgba(212, 42, 42, 0.76); /* Change to the desired color */
     }
     100% {
-      box-shadow: 1px 1px 10px rgba(150, 150, 150, 0.76);
+      box-shadow: 1px 1px 10px rgba(43, 106, 146, 0.76);
     }
   }
 
@@ -313,13 +313,13 @@
   /* CSS animation for the box shadow color */
 @keyframes slideBoxShadowColor {
   0% {
-    box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.76);
+    box-shadow: 1px 1px 10px rgba(175, 208, 43, 0.76);
   }
   50% {
-    box-shadow: 1px 1px 10px rgba(78, 78, 78, 0.76); /* Change to the desired color */
+    box-shadow: 1px 1px 10px rgba(35, 216, 144, 0.76); /* Change to the desired color */
   }
   100% {
-    box-shadow: 1px 1px 10px rgba(150, 150, 150, 0.76);
+    box-shadow: 1px 1px 10px rgba(168, 31, 31, 0.76);
   }
 }
 
