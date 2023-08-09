@@ -232,7 +232,7 @@ const navigate = useNavigate()
   
   return (
     <div>
-      <button className='back--preview--button' onClick={handleBackButton}>🔙</button>
+      
       <FilterBar
        onSearch={handleSearch}
        filteredShows={filteredShows}
@@ -418,10 +418,7 @@ const navigate = useNavigate()
       )}
      </div>
      <div className="backbutton__container">
-      <button 
-      className="back__button"
-      onClick={() => setFilteredShows(updatedShowData)}
-      >Back</button>
+     <button className='back--preview--button' onClick={handleBackButton}>🔙</button>
       </div>
       </div>
        )

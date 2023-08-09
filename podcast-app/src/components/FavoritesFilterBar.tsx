@@ -1,5 +1,4 @@
-import React, { useState} from "react";
-
+import React, { useState } from "react";
 
 type SelectedShow = {
   id: string;
@@ -22,14 +21,14 @@ type SelectedShow = {
 };
 
 type FilterBarProps = {
- // favorites: FavoriteShowData;
-  onSort: (sortOption: string) => void; 
+  // favorites: FavoriteShowData;
+  onSort: (sortOption: string) => void;
   onSearch: (query: string) => void;
 };
 
 export const FilterBar: React.FC<FilterBarProps> = ({ onSearch, onSort }) => {
   const [searchQuery, setSearchQuery] = useState("");
-  const [sortShows, setSortShows] = useState<string>('');
+  const [sortShows, setSortShows] = useState<string>("");
 
   const handleSearch = (event: React.ChangeEvent<HTMLInputElement>) => {
     const query = event.target.value;
@@ -51,32 +50,32 @@ export const FilterBar: React.FC<FilterBarProps> = ({ onSearch, onSort }) => {
   };
 
   return (
-    <div>
+    <div className="filter__bar">
       <h3 className="heading__check">Check out all your Favs!</h3>
-      <div className="filter__bar">
-        <form className="search__container" onSubmit={handleSubmit}>
-          <label htmlFor="search" className="search__label">
-            Search
-          </label>
-          <input
-            type="search"
-            id="search"
-            name="search"
-            value={searchQuery}
-            onChange={handleSearch}
-            required
-            className="search__input"
-          />
-        </form>
+     
+        <div className="filter--bar">
+          <form className="search__container" onSubmit={handleSubmit}>
+            <label htmlFor="search" className="search__label">
+              Search
+            </label>
+            <input
+              type="search"
+              id="search"
+              name="search"
+              value={searchQuery}
+              onChange={handleSearch}
+              required
+              className="search__input"
+            />
+          </form>
 
-        <div className="sort__container">
           <div className="filter__heading">
             <p>Sort By:</p>
           </div>
-          <select 
-          className="filter__select"
-          value={sortShows}
-           onChange={handleSort}
+          <select
+            className="filter__select"
+            value={sortShows}
+            onChange={handleSort}
           >
             <option value="">Sort by</option>
             <option value="a-z">A-Z</option>
@@ -85,8 +84,7 @@ export const FilterBar: React.FC<FilterBarProps> = ({ onSearch, onSort }) => {
             <option value="least recent">LEAST RECENT</option>
           </select>
         </div>
-      </div>
-    
+      
     </div>
   );
 };

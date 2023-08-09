@@ -45,7 +45,7 @@ export const Carousal: React.FC<CarouselProps> = ({ data }) => {
 
   return (
     <div>
-      <h3 className="carousel--heading">Top pics of the season!</h3>
+      <h3 className="carousel--heading">Top pics of the season⤵️</h3>
       <div className="carousel--container">
         <Slider {...settings}>
           {data.map((show) => {
