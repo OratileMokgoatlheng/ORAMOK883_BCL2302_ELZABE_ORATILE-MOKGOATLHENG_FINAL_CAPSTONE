@@ -2,13 +2,13 @@
 @media (min-width: 300px) {
   .filter--bar {
     display: flex;
-    animation: slideBoxShadowColor 2s infinite
+    animation: slideBoxShadowColor 1.8s infinite
   }
     
   .filter--heading {
     font-family:serif;
     font-size: 15px;
-    color: white;
+    color: rgb(233, 226, 226);
     
   }
     

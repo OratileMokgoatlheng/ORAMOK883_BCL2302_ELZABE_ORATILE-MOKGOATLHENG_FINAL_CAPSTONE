@@ -7,8 +7,8 @@
     margin: 0;
     padding: 0;
     justify-content: space-between;
-    background-color: rgba(134, 147, 149, 0.76);
-    box-shadow: 2px 2px 8px rgba(255, 255, 255, 0.76);
+    background-color: rgba(139, 145, 146, 0.76);
+    box-shadow: 2px 2px 8px rgba(160, 153, 153, 0.76);
   }
 
   .nav--name {
@@ -20,7 +20,7 @@
   .podcast--name {
     font-weight: bolder;
     font-size: 25px;
-    color: rgba(255, 255, 255, 0.76);
+    color: rgba(233, 221, 221, 0.76);
     text-align: center;
   }
 

@@ -7,25 +7,25 @@
     margin-right: 0;
     margin-left: 25px;
     padding-top: 10px;
-    border-color: rgb(255, 255, 255);
+    border-color: rgb(235, 225, 225);
   }
 
   /* CSS animation for the box shadow color */
   @keyframes slideBoxShadowColor {
     0% {
-      box-shadow: 1px 1px 10px rgba(168, 25, 184, 0.76);
+      box-shadow: 1px 1px 10px rgba(167, 25, 184, 0.76);
     }
     50% {
-      box-shadow: 1px 1px 10px rgba(212, 42, 42, 0.76); /* Change to the desired color */
+      box-shadow: 1px 1px 10px rgba(212, 43, 42, 0.76); /* Change to the desired color */
     }
     100% {
-      box-shadow: 1px 1px 10px rgba(43, 106, 146, 0.76);
+      box-shadow: 1px 1px 10px rgba(43, 107, 146, 0.76);
     }
   }
 
   /* Applying the animation to carousel container */
   .slick-slider {
-    animation: slideBoxShadowColor 2s infinite; /* Adjust animation duration as needed */
+    animation: slideBoxShadowColor 1.8s infinite; /* Adjust animation duration as needed */
   }
 
   .slick-next {
@@ -37,7 +37,7 @@
     background-color: transparent;
     color: white;
     font-size: 0px;
-    padding: 2px;
+    padding: 1.8px;
     border: none;
     outline: none;
     cursor: pointer;
