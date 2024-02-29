@@ -1,6 +1,5 @@
 import { useNavigate } from "react-router-dom";
 import MicIcon from "@mui/icons-material/Mic";
-//import { Switch }  from "@mui/material"
 
 export const Header = () => {
 const navigate = useNavigate()
