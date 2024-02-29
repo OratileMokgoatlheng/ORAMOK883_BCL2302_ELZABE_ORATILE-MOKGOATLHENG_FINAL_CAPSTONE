@@ -1,10 +1,10 @@
 
-import React, { useState, useEffect, useCallback} from 'react';
+import React, { useState, useEffect} from 'react';
 import { FilterBar } from './Filter-bar';
 import { useNavigate } from "react-router-dom";
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
-import  {CircularProgress, Button } from '@mui/material';
+import  {CircularProgress } from '@mui/material';
 import FavoriteBorderOutlinedIcon from '@mui/icons-material/FavoriteBorderOutlined';
 import FavoriteOutlinedIcon from '@mui/icons-material/FavoriteOutlined';
 import { useSelector, useDispatch } from 'react-redux';
@@ -78,7 +78,7 @@ type SelectedShow = {
     updated: Date;
   };
 
-export const PodcastPreview: React.FC<PodcastPreviewProps> = ({data, showIds}) => {
+export const PodcastPreview: React.FC<PodcastPreviewProps> = ({data}) => {
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [updatedShowData, setUpdatedShowData] = useState<AllShowData> ([]) // The complete data that has the seasons and episodes information.
   const [dialogOpen, setDialogOpen] = useState<boolean> (false);   // A boolean value to toggle the dialog between open and close.
